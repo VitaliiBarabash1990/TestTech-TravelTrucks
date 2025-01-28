@@ -1,0 +1,42 @@
+.homePage {
+	background-image: url("./img/hero_1x.webp");
+	padding: 200px 0 200px 24px;
+	background-size: cover;
+	padding-left: 64px;
+}
+.homePageHeader,
+.homePageDescr {
+	font-weight: 600;
+}
+.homePageHeader {
+	font-size: 48px;
+	line-height: 67%;
+	color: var(--inputs);
+	margin-bottom: 16px;
+}
+.homePageDescr {
+	font-size: 24px;
+	line-height: 133%;
+	color: var(--inputs);
+	margin-bottom: 40px;
+}
+/* .button {
+	border-radius: 200px;
+	padding: 16px 60px;
+	width: 173px;
+	height: 56px;
+	background: var(--button);
+	font-family: var(--font-family);
+	font-weight: 500;
+	font-size: 16px;
+	line-height: 150%;
+	letter-spacing: -0.01em;
+	color: var(--white);
+} */
+
+@media screen and (min-device-pixel-ratio: 2) and (max-width: 100vh),
+	(min-resolution: 192dpi) and (max-width: 100vh) {
+	.ContactForm__wrap_img {
+		background-image: url("./img/hero@2x.webp");
+	}
+}
