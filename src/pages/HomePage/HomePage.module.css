@@ -1,5 +1,5 @@
 .homePage {
-	background-image: url("./img/hero_1x.webp");
+	background-image: url("/img/picture_x1.jpg");
 	padding: 200px 0 200px 24px;
 	background-size: cover;
 	padding-left: 64px;
@@ -36,7 +36,7 @@
 
 @media screen and (min-device-pixel-ratio: 2) and (max-width: 100vh),
 	(min-resolution: 192dpi) and (max-width: 100vh) {
-	.ContactForm__wrap_img {
-		background-image: url("./img/hero@2x.webp");
+	.homePage {
+		background-image: url("/img/picture_x2.jpg");
 	}
 }
