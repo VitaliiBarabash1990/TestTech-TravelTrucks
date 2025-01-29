@@ -1,0 +1,14 @@
+.cataloguePage {
+	padding: 48px 64px;
+	display: flex;
+	flex-direction: row;
+	gap: 64px;
+}
+.catalogueFilter {
+	border: 1px solid green;
+	width: 29%;
+}
+.catalogueResults {
+	border: 1px solid blue;
+	width: 71%;
+}
