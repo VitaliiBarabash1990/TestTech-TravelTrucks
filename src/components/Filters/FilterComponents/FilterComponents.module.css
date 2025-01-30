@@ -34,7 +34,7 @@
 	color: var(--text);
 	line-height: 24px;
 	font-size: 16px;
-	margin-bottom: 16px;
+	margin-bottom: 32px;
 }
 
 .filterName {
@@ -58,7 +58,7 @@
 .acLabel {
 	display: flex;
 	justify-content: center;
-	width: 111px;
+	min-width: 112px;
 	height: 96px;
 	border: 1px solid var(--gray-light);
 	border-radius: 8px;
