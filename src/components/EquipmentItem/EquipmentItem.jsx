@@ -4,7 +4,7 @@ const EquipmentItem = () => {
 	return (
 		<li className={css.equipmentItem}>
 			<svg width={20} height={20} fill="#101828">
-				<use href={`/symbol-defs.svg#icon-${}`}></use>
+				<use href={`/symbol-defs.svg#icon-${1}`}></use>
 			</svg>
 		</li>
 	);
