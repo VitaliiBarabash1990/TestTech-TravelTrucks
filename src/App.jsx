@@ -3,7 +3,7 @@ import "./App.css";
 import { Route, Routes } from "react-router-dom";
 import HomePage from "./pages/HomePage/HomePage.jsx";
 import CataloguePage from "./pages/CataloguePage/CataloguePage.jsx";
-import IndividualCamperPage from "./pages/IndividualCamperPage/IndividualCamperPage.jsx";
+import DetailCamperPage from "./pages/DetailCamperPage/DetailCamperPage.jsx";
 import NotFoundPage from "./pages/NotFoundPage/NotFoundPage.jsx";
 import Navigation from "./components/Navigation/Navigation.jsx";
 import { Toaster } from "react-hot-toast";
@@ -17,7 +17,7 @@ function App() {
 				<Routes>
 					<Route path="/" element={<HomePage />} />
 					<Route path="/catalog" element={<CataloguePage />} />
-					<Route path="/catalog/:id" element={<IndividualCamperPage />} />
+					<Route path="/catalog/:id" element={<DetailCamperPage />} />
 					<Route path="*" element={<NotFoundPage />} />
 				</Routes>
 			</Suspense>

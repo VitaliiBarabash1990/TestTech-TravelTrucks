@@ -1,3 +1,4 @@
+import CampersList from "../../components/CampersList/CampersList.jsx";
 import Filters from "../../components/Filters/Filters.jsx";
 import css from "./CataloguePage.module.css";
 
