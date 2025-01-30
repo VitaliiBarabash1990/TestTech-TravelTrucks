@@ -1,0 +1,49 @@
+.features {
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	background-color: var(--grey-forms);
+	border-radius: 10px;
+	max-width: 100%;
+	padding: 8px 10px;
+}
+
+@media screen and (min-width: 768px) {
+	.features {
+		padding: 16px 20px;
+		max-width: calc(50% - 20px);
+	}
+}
+
+@media screen and (min-width: 1440px) {
+	.features {
+		max-width: calc(50% - 40px);
+		padding: 44px 52px;
+	}
+}
+.groupIcons {
+	gap: 8px;
+	display: flex;
+	flex-wrap: wrap;
+	margin-bottom: 20px;
+}
+.vehicleDataHeader {
+	font-weight: 600;
+	font-size: 20px;
+	line-height: 24px;
+	margin-bottom: 24px;
+}
+.vehicleDetailData {
+	border-top: 1px solid var(--light-grey);
+	padding-top: 24px;
+	display: flex;
+	flex-direction: column;
+	gap: 16px;
+}
+.vehicleDetailDataElement {
+	display: flex;
+	justify-content: space-between;
+}
+.elementText {
+	line-height: 24px;
+}
