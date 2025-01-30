@@ -3,6 +3,8 @@ import * as Yup from "yup";
 import Flatpickr from "react-flatpickr";
 import "flatpickr/dist/flatpickr.css";
 import css from "./BookingForm.module.css";
+import toast from "react-hot-toast";
+import { useParams } from "react-router-dom";
 
 const bookingSchema = Yup.object().shape({
 	name: Yup.string()
@@ -26,7 +28,12 @@ const initialValues = {
 };
 
 const BookingForm = () => {
-	const handleSubmit = () => {};
+	const { id } = useParams();
+	const handleSubmit = (values) => {
+		values.camperId = id;
+		console.log(values);
+		toast.success("Your booking sucessfully sended!");
+	};
 	return (
 		<Formik
 			initialValues={initialValues}
