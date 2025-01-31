@@ -1,0 +1,7 @@
+.groupFeaturesAndBooking {
+	padding-top: 44px;
+	border-top: 1px solid var(--light-grey);
+	display: flex;
+	flex-direction: row;
+	gap: 40px;
+}

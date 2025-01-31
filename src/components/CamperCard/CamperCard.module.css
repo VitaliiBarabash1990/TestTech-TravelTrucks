@@ -42,7 +42,7 @@
 .description {
 	font-weight: 400;
 	line-height: 24px;
-	color: var(--dark-grey);
+	color: var(--text);
 	white-space: nowrap;
 	overflow: hidden;
 	text-overflow: ellipsis;

@@ -11,5 +11,5 @@
 	background-color: transparent;
 }
 .active {
-	border-bottom: 4px solid var(--red);
+	border-bottom: 4px solid var(--button);
 }

@@ -2,24 +2,10 @@
 	display: flex;
 	flex-direction: column;
 	justify-content: space-between;
-	background-color: var(--grey-forms);
+	background-color: var(--inputs);
 	border-radius: 10px;
-	max-width: 100%;
-	padding: 8px 10px;
-}
-
-@media screen and (min-width: 768px) {
-	.features {
-		padding: 16px 20px;
-		max-width: calc(50% - 20px);
-	}
-}
-
-@media screen and (min-width: 1440px) {
-	.features {
-		max-width: calc(50% - 40px);
-		padding: 44px 52px;
-	}
+	max-width: calc(50% - 40px);
+	padding: 44px 52px;
 }
 .groupIcons {
 	gap: 8px;
@@ -34,7 +20,7 @@
 	margin-bottom: 24px;
 }
 .vehicleDetailData {
-	border-top: 1px solid var(--light-grey);
+	border-top: 1px solid var(--gray-light);
 	padding-top: 24px;
 	display: flex;
 	flex-direction: column;

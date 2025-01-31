@@ -1,0 +1,25 @@
+.comment {
+	display: flex;
+	flex-direction: column;
+	gap: 16px;
+}
+.groupNameAndRating {
+	display: flex;
+	gap: 16px;
+}
+.avatar {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	border-radius: 50%;
+	width: 60px;
+	height: 60px;
+	color: var(--button);
+	background-color: var(--badges);
+}
+.name {
+	margin-bottom: 4px;
+}
+.text {
+	color: var(--text);
+}

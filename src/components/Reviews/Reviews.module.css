@@ -1,0 +1,11 @@
+.reviews {
+	width: calc(50% - 40px);
+}
+.listOfComments {
+	display: flex;
+	flex-direction: column;
+	gap: 44px;
+}
+.comment {
+	display: flex;
+}

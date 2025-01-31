@@ -1,0 +1,20 @@
+.groupRatingAndLocation {
+	display: flex;
+	gap: 16px;
+	margin-bottom: 16px;
+}
+.groupRating {
+	font-weight: 400;
+	display: flex;
+	align-items: center;
+	gap: 4px;
+}
+.groupLocation {
+	font-weight: 400;
+	display: flex;
+	gap: 4px;
+	align-items: center;
+}
+.rating {
+	line-height: 24px;
+}
