@@ -1,0 +1,12 @@
+.loadMore {
+	padding: 16px 32px;
+	font-size: 16px;
+	line-height: 24px;
+	border-radius: 28px;
+	border: 1px solid var(--gray-light);
+	transform: border 250ms ease-in-out;
+	background-color: transparent;
+}
+.loadMore:hover {
+	border: 1px solid var(--button);
+}

@@ -8,18 +8,23 @@ import {
 	selectNumberOfCampers,
 } from "../../redux/campers/selectors.js";
 import { setFavoriteCampers } from "../../redux/campers/slice.js";
+import Loader from "../Loader/Loader.jsx";
+import LoadMore from "../LoadMore/LoadMore.jsx";
 
 const CampersList = ({ loadMoreHandler }) => {
 	const dispatch = useDispatch();
 
 	const campers = useSelector(selectCampers);
 	const favoriteCampers = useSelector(selectFavoriteCampers);
-	const totalCampers = useSelector(selectNumberOfCampers);
 	const loading = useSelector(selectIsLoading);
+	const totalCampers = useSelector(selectNumberOfCampers);
 
 	const setFavoriteHandler = (id) => {
 		dispatch(setFavoriteCampers(id));
 	};
+
+	const clickLoadMore =
+		campers.length < totalCampers && campers.length > 0 && !loading;
 
 	return (
 		<div className={css.groupCamperListAndLoadMore}>
@@ -34,6 +39,8 @@ const CampersList = ({ loadMoreHandler }) => {
 					</li>
 				))}
 			</ul>
+			{loading && <Loader />}
+			{clickLoadMore && <LoadMore loadMoreHandler={loadMoreHandler} />}
 		</div>
 	);
 };
