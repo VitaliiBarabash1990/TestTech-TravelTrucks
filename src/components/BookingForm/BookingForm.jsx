@@ -31,7 +31,6 @@ const BookingForm = () => {
 	const { id } = useParams();
 	const handleSubmit = (values) => {
 		values.camperId = id;
-		console.log(values);
 		toast.success("Your booking sucessfully sended!");
 	};
 	return (
