@@ -11,7 +11,9 @@
 .header {
 	display: flex;
 	width: 100%;
+	align-items: center;
 	justify-content: space-between;
+	margin-bottom: 8px;
 }
 .name {
 	line-height: 32px;
@@ -21,7 +23,6 @@
 	display: flex;
 	align-items: center;
 	gap: 12px;
-	margin-bottom: 8px;
 }
 .price {
 	line-height: 32px;
@@ -31,6 +32,8 @@
 	outline: none;
 	border: none;
 	background-color: transparent;
+	padding-top: 0;
+	padding-bottom: 0;
 }
 .isFavorite {
 	fill: var(--red);
@@ -55,4 +58,7 @@
 	flex-wrap: wrap;
 	gap: 8px;
 	margin-bottom: 24px;
+}
+.button_more {
+	white-space: nowrap;
 }

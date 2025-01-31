@@ -46,7 +46,7 @@ const CamperCard = ({ camperData, favoriteCampers, setFavoriteHandler }) => {
 				</ul>
 				<Link
 					target="blank"
-					className="button"
+					className={`button ${css.button_more}`}
 					to={`/catalog/${camperData.id}`}
 				>
 					Show more
