@@ -1,0 +1,58 @@
+.image {
+	border-radius: 10px;
+	width: 292px;
+	object-fit: cover;
+}
+.mainInfo {
+	display: flex;
+	flex-direction: column;
+	width: 100%;
+}
+.header {
+	display: flex;
+	width: 100%;
+	justify-content: space-between;
+}
+.name {
+	line-height: 32px;
+	font-size: 24px;
+}
+.groupPriceAndFavorite {
+	display: flex;
+	align-items: center;
+	gap: 12px;
+	margin-bottom: 8px;
+}
+.price {
+	line-height: 32px;
+	font-size: 24px;
+}
+.favoriteButton {
+	outline: none;
+	border: none;
+	background-color: transparent;
+}
+.isFavorite {
+	fill: var(--red);
+}
+.favorite {
+	width: 24px;
+	height: 26px;
+}
+.description {
+	font-weight: 400;
+	line-height: 24px;
+	color: var(--dark-grey);
+	white-space: nowrap;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	margin-bottom: 24px;
+	margin-top: 8px;
+	width: 500px;
+}
+.equipment {
+	display: flex;
+	flex-wrap: wrap;
+	gap: 8px;
+	margin-bottom: 24px;
+}
