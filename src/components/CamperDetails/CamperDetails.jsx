@@ -2,37 +2,51 @@ import { useState } from "react";
 import Modal from "../Modal/Modal.jsx";
 import RatingAndLocation from "../RatingAndLocation/RatingAndLocation.jsx";
 import css from "./CamperDetails.module.css";
+import { useSelector } from "react-redux";
+import { selectChoosenCamper } from "../../redux/campers/selectors.js";
 
 const CamperDetails = () => {
 	const [modalIsOpen, setIsOpen] = useState(false);
+	const [modalData, setModalData] = useState(null);
+
+	const choosenCamper = useSelector(selectChoosenCamper);
+
+	const onModalClose = () => {
+		setModalData(null);
+		setIsOpen(false);
+	};
 
 	return (
 		<>
-			{modalIsOpen && <Modal />}
+			{modalIsOpen && (
+				<Modal
+					modalData={modalData}
+					modalIsOpen={modalIsOpen}
+					closeModal={onModalClose}
+				/>
+			)}
 			<div className={css.camperDetails}>
-				<h2 className={css.name}>Mavericks</h2>
-				<RatingAndLocation />
-				<h2 className={css.price}>€8000.00</h2>
+				<h2 className={css.name}>{choosenCamper.name}</h2>
+				<RatingAndLocation
+					rating={choosenCamper.rating}
+					reviews={choosenCamper.reviews}
+					location={choosenCamper.location}
+				/>
+				<h2 className={css.price}>€{choosenCamper.price}.00</h2>
 				<ul className={css.images}>
-					{[].map((photo) => (
+					{choosenCamper.gallery.map((photo) => (
 						<li
 							key={photo.thumb}
 							onClick={() => {
 								setIsOpen(true);
+								setModalData(photo.original);
 							}}
 						>
 							<img src={photo.thumb} alt="camper photo" className={css.image} />
 						</li>
 					))}
 				</ul>
-				<p className={css.description}>
-					Embrace simplicity and freedom with the Mavericks panel truck, an
-					ideal choice for solo travelers or couples seeking a compact and
-					efficient way to explore the open roads. This no-frills yet reliable
-					panel truck offers the essentials for a comfortable journey, making it
-					the perfect companion for those who value simplicity and
-					functionality.
-				</p>
+				<p className={css.description}>{choosenCamper.description}</p>
 			</div>
 		</>
 	);
