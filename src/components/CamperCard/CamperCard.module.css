@@ -35,12 +35,17 @@
 	padding-top: 0;
 	padding-bottom: 0;
 }
+.favoriteButton:focus:not(:focus-visible) {
+	outline: none;
+}
 .isFavorite {
-	fill: var(--red);
+	fill: var(--button);
+	outline: none;
 }
 .favorite {
 	width: 24px;
 	height: 26px;
+	outline: none;
 }
 .description {
 	font-weight: 400;
