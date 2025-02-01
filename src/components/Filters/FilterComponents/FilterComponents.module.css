@@ -11,7 +11,7 @@
 	margin-bottom: 8px;
 }
 .locationIcon {
-	fill: var(--main);
+	fill: var(--gray);
 	position: absolute;
 	top: 50px;
 	left: 18px;
@@ -20,7 +20,7 @@
 	transition: fill 250ms ease-in-out;
 }
 .inputGroup input:not(:placeholder-shown) + .locationIcon {
-	fill: var(--black);
+	fill: var(--main);
 }
 .input {
 	padding: 18px 18px 18px 46px;
