@@ -1,22 +1,30 @@
 import css from "./Commentars.module.css";
 
-const Commentars = () => {
+const Commentars = ({ review }) => {
+	const numberOfStars = 5;
+
+	const stars = Array.from({ length: numberOfStars }, (_, index) => (
+		<svg
+			key={index}
+			width={16}
+			height={16}
+			fill={index < review.reviewer_rating ? "var(--rating)" : "var(--badges)"}
+		>
+			<use href="/symbol-defs.svg#icon-rating"></use>
+		</svg>
+	));
 	return (
 		<div className={css.comment}>
 			<div className={css.groupNameAndRating}>
-				<p className={css.avatar}>A</p>
+				<p className={css.avatar}>
+					{review.reviewer_name.split("")[0].toUpperCase()}
+				</p>
 				<div>
-					<p className={css.name}>Alice</p>
-					<svg>
-						<use></use>
-					</svg>
+					<p className={css.name}>{review.reviewer_name}</p>
+					{stars}
 				</div>
 			</div>
-			<p className={css.text}>
-				The Mavericks panel truck was a perfect choice for my solo road trip.
-				Compact, easy to drive, and had all the essentials. The kitchen
-				facilities were sufficient, and the overall experience was fantastic.
-			</p>
+			<p className={css.text}>{review.comment}</p>
 		</div>
 	);
 };

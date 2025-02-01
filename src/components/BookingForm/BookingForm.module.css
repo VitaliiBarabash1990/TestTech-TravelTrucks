@@ -1,7 +1,7 @@
 .formContainer {
-	border: 1px solid var(---gray-light);
+	border: 1px solid var(--gray-light);
 	border-radius: 10px;
-	width: 100%;
+	width: 641px;
 	padding: 44px 57px;
 }
 .header {

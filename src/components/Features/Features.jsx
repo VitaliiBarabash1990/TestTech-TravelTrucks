@@ -5,15 +5,9 @@ import css from "./Features.module.css";
 import { selectChoosenCamper } from "../../redux/campers/selectors.js";
 
 const Features = () => {
+	const choosenCamperData = useSelector(selectChoosenCamper);
+
 	const {
-		form,
-		length,
-		width,
-		height,
-		tank,
-		consumption,
-		transmission,
-		engine,
 		AC,
 		bathroom,
 		kitchen,
@@ -23,7 +17,7 @@ const Features = () => {
 		microwave,
 		gas,
 		water,
-	} = useSelector(selectChoosenCamper);
+	} = choosenCamperData;
 
 	const iconsNames = Object.entries({
 		AC,
@@ -38,8 +32,18 @@ const Features = () => {
 	})
 		.filter(([, value]) => value === true)
 		.map(([key]) => key);
-	const engineAndTransmissionIcons = [transmission, engine];
-	const vehicleDetailData = [form, length, width, height, tank, consumption];
+	const engineAndTransmissionIcons = [
+		choosenCamperData.transmission,
+		choosenCamperData.engine,
+	];
+	const vehicleDetailData = [
+		choosenCamperData.form,
+		choosenCamperData.length,
+		choosenCamperData.width,
+		choosenCamperData.height,
+		choosenCamperData.tank,
+		choosenCamperData.consumption,
+	];
 	const vehicleDetailKeys = [
 		"Form",
 		"Length",
