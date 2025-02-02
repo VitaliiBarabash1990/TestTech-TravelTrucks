@@ -23,25 +23,31 @@ const CampersList = ({ loadMoreHandler }) => {
 		dispatch(setFavoriteCampers(id));
 	};
 
+	const uniqueCampers = campers.filter(
+		(camper, index, self) => index === self.findIndex((c) => c.id === camper.id)
+	);
+
 	const clickLoadMore =
 		campers.length < totalCampers && campers.length > 0 && !loading;
 
 	return (
-		<div className={css.groupCamperListAndLoadMore}>
-			<ul className={css.campersList}>
-				{campers.map((camper) => (
-					<li key={camper.id} className={css.listItem}>
-						<CamperCard
-							camperData={camper}
-							favoriteCampers={favoriteCampers}
-							setFavoriteHandler={setFavoriteHandler}
-						/>
-					</li>
-				))}
-			</ul>
-			{loading && <Loader />}
-			{clickLoadMore && <LoadMore loadMoreHandler={loadMoreHandler} />}
-		</div>
+		campers && (
+			<div className={css.groupCamperListAndLoadMore}>
+				<ul className={css.campersList}>
+					{uniqueCampers.map((camper) => (
+						<li key={camper.id} className={css.listItem}>
+							<CamperCard
+								camperData={camper}
+								favoriteCampers={favoriteCampers}
+								setFavoriteHandler={setFavoriteHandler}
+							/>
+						</li>
+					))}
+				</ul>
+				{loading && <Loader />}
+				{clickLoadMore && <LoadMore loadMoreHandler={loadMoreHandler} />}
+			</div>
+		)
 	);
 };
 
