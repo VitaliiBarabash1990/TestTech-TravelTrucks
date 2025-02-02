@@ -1,8 +1,9 @@
 import { ErrorMessage, Field, Form, Formik } from "formik";
 import * as Yup from "yup";
+import css from "./BookingForm.module.css";
 import Flatpickr from "react-flatpickr";
 import "flatpickr/dist/flatpickr.css";
-import css from "./BookingForm.module.css";
+import "./CustomFormCalendar.css";
 import toast from "react-hot-toast";
 import { useParams } from "react-router-dom";
 
@@ -79,6 +80,7 @@ const BookingForm = () => {
 								options={{
 									dateFormat: "d.m.Y",
 									minDate: new Date(),
+									appendTo: document.body,
 								}}
 								onChange={(selectedDates) => {
 									if (selectedDates.length > 0) {
